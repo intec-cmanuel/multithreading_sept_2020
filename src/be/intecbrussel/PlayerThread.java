@@ -12,9 +12,7 @@ public class PlayerThread extends Thread{
     @Override
     public void run() {
         for (int i = 0; i < 1000; i++){
-            int fans = team.getTotalFans();
-            fans++;
-            team.setTotalFans(fans);
+            team.decrement();
         }
     }
 }
