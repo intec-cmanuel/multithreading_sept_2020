@@ -13,12 +13,18 @@ public class Snowkids {
     }
 
     public void increment() {
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {}
         synchronized (monitorObject) {
             totalFans++;
         }
     }
 
     public synchronized void decrement() {
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {}
         totalFans--;
     }
 }
